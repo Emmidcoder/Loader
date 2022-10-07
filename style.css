@@ -10,7 +10,6 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* background-color: beige; */
 
     width: 25rem;
     height: 25rem;
@@ -87,13 +86,9 @@
     border-radius: 50%;
     background-color: #0371ba;
     animation: bounce-top .9s infinite;
-
 }
 
-
-
 @keyframes bounce-top {
-
     0% {
         transform: translateY(0);
         animation-timing-function: ease-in;
