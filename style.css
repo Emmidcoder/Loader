@@ -1,0 +1,117 @@
+.loading {
+    position: fixed;
+    background-image: linear-gradient(to top right, #0371ba68, #9fcd446d);
+    width: 100vw;
+    height: 100vh;
+}
+
+.loading__rings {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* background-color: beige; */
+
+    width: 25rem;
+    height: 25rem;
+}
+
+.ring {
+    position: absolute;
+    top: 25%;
+    left: 30%;
+    box-sizing: border-box;
+    width: 10rem;
+    height: 10rem;
+    border: 8px solid #a0cd44;
+    transform: rotate(90deg);
+
+    border-radius: 50%;
+    animation: loading__ring 1.7s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #a0cd44 transparent transparent transparent;
+}
+
+.loading__rings div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+
+.loading__rings div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+
+.loading__rings div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+
+.vetcareid-logo {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 70px;
+}
+
+@keyframes loading__ring {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loading__text {
+    display: flex;
+    gap: 5px;
+    font-size: 2rem;
+    text-transform: capitalize;
+    color: #0371ba;
+
+    position: absolute;
+    bottom: 0;
+    left: 47%;
+    transform: translateX(-50%);
+}
+
+.dots {
+    display: flex;
+    align-items: flex-end;
+    gap: 3px;
+}
+
+.dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #0371ba;
+    animation: bounce-top .9s infinite;
+
+}
+
+
+
+@keyframes bounce-top {
+
+    0% {
+        transform: translateY(0);
+        animation-timing-function: ease-in;
+    }
+
+    50% {
+        transform: translateY(-6px);
+        animation-timing-function: ease-in;
+    }
+
+    70% {
+        transform: translateY(-4px);
+        animation-timing-function: ease-in;
+    }
+
+    100% {
+        transform: translateY(0px);
+        animation-timing-function: ease-out;
+        opacity: 1;
+    }
+}
